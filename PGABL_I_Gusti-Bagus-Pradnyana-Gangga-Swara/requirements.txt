@@ -1,0 +1,38 @@
+# ============================================================
+# requirements.txt
+# Gabungan dependency dari:
+#   1. Fine-tuning_submission_PGABL_...ipynb
+#   2. RAG_Submission_PGABL_...ipynb
+# ============================================================
+
+# --- Core ML / Fine-tuning ---
+torch
+transformers==4.46.3
+accelerate
+bitsandbytes
+peft
+trl
+xformers
+unsloth @ git+https://github.com/unslothai/unsloth.git
+datasets
+wandb
+
+# --- LangChain & RAG Stack ---
+langchain==0.3.25
+langchain-community==0.3.24
+langchain-classic
+langchain-core>=0.3.59,<1.0.0
+langchain-text-splitters==0.3.8
+langchain-huggingface==0.1.2
+
+# --- Vector Store & Retrieval ---
+faiss-cpu==1.9.0
+rank-bm25==0.2.2
+sentence-transformers==3.4.1
+
+# --- Document Loading ---
+pypdf
+pymupdf
+
+# --- UI ---
+gradio==5.30.0
